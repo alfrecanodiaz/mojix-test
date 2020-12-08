@@ -11,12 +11,14 @@
     "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
-    "@angular/animations": "5.2.11",
+    "@angular/animations": "^11.0.3",
+    "@angular/cdk": "^11.0.2",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
     "@angular/compiler-cli": "5.2.11",
     "@angular/core": "5.2.11",
     "@angular/forms": "5.2.11",
+    "@angular/material": "^11.0.2",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@capacitor/core": "2.4.4",

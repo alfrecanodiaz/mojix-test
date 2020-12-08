@@ -1,14 +1,37 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Popular Movies
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <!-- Movies List -->
+
+  <div cards>
+
+    <div class="grid-full">
+      <ion-row>
+        <ion-col col-12 *ngFor="let movie of movies">
+          <ion-card (click)="openDetail(movie)">
+            <ion-card-header>
+              <img [src]='(baseImageUrl)+movie.poster_path' alt="">
+            </ion-card-header>
+            <ion-card-content>
+              <h1>{{movie.title}}</h1>
+              <p>{{movie.overview}}</p>
+              <p text-right>
+                <button ion-button color="primary">Ver más</button>
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+  <!-- Movies List -->
+
 </ion-content>
