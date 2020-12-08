@@ -14,3 +14,27 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+[cards] {
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px;
+  overflow: hidden;
+
+  ion-col {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+  }
+
+  ion-card {
+    margin-bottom: 12px;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  ion-card-content {
+    color: #fff;
+  }
+}

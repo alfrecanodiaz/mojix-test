@@ -5,13 +5,8 @@ import { catchError, tap } from "rxjs/operators";
 import { ResponseMovies } from "../../models/response-movies";
 import { of } from "rxjs/observable/of";
 import { environment } from "../../environment";
+import { Movie } from "../../models/movie";
 
-/*
-  Generated class for the ApiProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ApiProvider {
   baseUrl: string;
@@ -28,6 +23,14 @@ export class ApiProvider {
       catchError(
         this.handleError<ResponseMovies>("Get movies", ResponseMovies.empty())
       )
+    );
+  }
+
+  getDetail(movie: Movie): Observable<Movie> {
+    const command = `movie/${movie.id}`;
+    return this.httpClient.get<Movie>(this.baseUrl + command).pipe(
+      tap((Movie) => console.log("Movie fetched!")),
+      catchError(this.handleError<Movie>("Get movie", new Movie()))
     );
   }
 

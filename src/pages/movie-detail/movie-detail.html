@@ -1,0 +1,38 @@
+<!--
+  Generated template for the MovieDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Movie</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div cards>
+
+    <div class="grid-full" *ngIf="movie">
+      <ion-row>
+        <ion-col col-12>
+          <ion-card>
+            <ion-card-header>
+              <img [src]='(baseImageUrl)+movie.poster_path' alt="">
+            </ion-card-header>
+            <ion-card-content>
+              <h1>{{movie.title}}</h1>
+              <p>{{movie.overview}}</p>
+              <p text-right>
+                <button ion-button color="primary">Ver más</button>
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+</ion-content>

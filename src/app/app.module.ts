@@ -9,6 +9,7 @@ import { MyApp } from "./app.component";
 import { HomePage } from "../pages/home/home";
 import { ApiProvider } from "../providers/api/api";
 import { HttpConfigInterceptor } from "../interceptors/httpconfig.interceptor";
+// import { Routes, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [MyApp, HomePage],
