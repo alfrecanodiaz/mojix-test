@@ -1,0 +1,7 @@
+{
+  "name": "mojix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "ionic-angular"
+}
